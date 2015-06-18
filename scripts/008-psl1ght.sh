@@ -7,6 +7,9 @@ wget --no-check-certificate https://github.com/ps3dev/PSL1GHT/tarball/master -O 
 ## Unpack the source code.
 rm -Rf psl1ght && mkdir psl1ght && tar --strip-components=1 --directory=psl1ght -xvzf psl1ght.tar.gz
 
+## Update psl1ght
+cat ../patches/pslight.patch | patch -p1 -d psl1ght
+
 ## Create the build directory.
 cd psl1ght
 
